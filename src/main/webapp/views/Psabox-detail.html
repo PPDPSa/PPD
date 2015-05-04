@@ -1,0 +1,25 @@
+<div id="psaBoxDetail">
+
+    <h2>Detail psaBox</h2>
+
+    <form>
+
+            <label for="psaBox.libelle">libelle</label>
+            <input id="psaBox.libelle" type="text" ng-model="psaBox.libelle"/>
+            <label for="">codeRddi</label>
+            <input id="psaBox.codeRddi" type="text" ng-model="psaBox.codeRddi"/>
+            <label for="">nomContact</label>
+            <input id="psaBox.contact.nomContact" type="text" ng-model="psaBox.contact.nomContact"/>
+            <label for="">numeroTelContact</label>
+            <input id="psaBox.contact.numeroTelContact" type="text" ng-model="psaBox.contact.numeroTelContact"/>
+            <label for="">emailContact</label>
+            <input id="psaBox.contact.emailContact" type="text" ng-model="psaBox.contact.emailContact"/>
+            <label for="psaBox.kfan">kfan</label>
+            <input id="psaBox.kfan" type="text"  ng-model="psaBox.kfan" disabled/>
+        <hr/>
+
+    <button class="button" ng-click="modifier(psaBox)">modifier</button>
+
+    </form>
+
+</div>

@@ -1,0 +1,11 @@
+<div id="ContactDetail">
+
+    <h2>Liste Contact</h2>
+
+   <div ng-repeat="contact in contacts" >
+   <form>
+			{{contact.nomContact}}
+        <button class="button" ng-click="modifier(contact)">modifier</button>
+	</form>
+	</div>
+</div>

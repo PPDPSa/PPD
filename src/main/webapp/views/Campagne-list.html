@@ -1,0 +1,18 @@
+<div id="Campagnelist">
+
+    <h2>liste des Campagnes</h2>
+    
+	   <div ng-repeat="campagne in campagnes ">
+	   	<h3> nom  : {{campagne.nom}} </h3>
+	   	<div>liste des participants
+	   	<p ng-repeat ="action in campagne.actions">
+	   		
+	   	{{action.psaBox.kfan}} : {{action.encours.nom}}
+	   	</p>
+	   	 </div>
+	   	    </br>
+        <button class="button" ng-click="detail(campagne)">detail</button>
+	   </div> 
+    
+    
+</div>    

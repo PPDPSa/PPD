@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration scan="true" scanPeriod="30s">
+	<appender name="logFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${catalina.base}/logs/niroshan-logs-back.log</file>
+		<encoder>
+			<pattern>%d{yyyy/MM/dd-HH:mm:ss,SSS} %5p [%t] %c - %m%n</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${catalina.base}/logs/niroshan-logs-back.log-%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+	
+	<appender name="debugFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${catalina.base}/logs/niroshan-logs-back-debug.log</file>
+		<encoder>
+			<pattern>%d{yyyy/MM/dd-HH:mm:ss,SSS} %5p [%t] %c - %m%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${catalina.base}/logs/niroshan-logs-back-debug.log-%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+	
+	<logger name="ppd.psa.*" level="DEBUG" />
+
+	<root level="WARN">
+		<appender-ref ref="logFile" />
+		<appender-ref ref="debugFile" />
+	</root>
+	
+</configuration>

@@ -1,0 +1,20 @@
+<h2>{{campagne.nom}}</h2>
+
+<table id="table-transform" data-toolbar="#transform-buttons">
+    <thead>
+    <tr>
+        <th>Les Psaboxs</th>
+        <th>etapes en cours</th>
+        <th>etapes suivants</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="action in campagne.actions" id="tr_id_1" class="tr-class-1">
+        <td>{{action.psaBox.kfan}}</td>
+        <td>{{action.encours.nom}}</td>
+        <td> <select ng-model="testEtape" ng-options="etape.nom for etape in campagne.etapes">
+    </select></td>
+    	<td><button class="button" ng-click="updateEtape(action,testEtape)">Sauver</button></td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+
+<div id="MailNew">
+
+	<h2>Nouveau mail</h2>
+<div ng-show="hidden">
+		Le chargement du fichier se fera a la suite de la validation de votre
+		mail </br>
+		</br>
+	</div>
+	<label for="">Nom du mail</label>
+	 <input id="mail.nom" type="text"
+		ng-model="mail.nom" /> 
+		<label for="">objet</label> <input
+		id="mail.objet" type="text" ng-model="mail.objet" />
+	<form>
+		<label for="">Corps du mail</label>
+		<textarea rows="4" id="mail.corpText" type="text"
+			ng-model="mail.corpText"> 
+            </textarea>
+		<select ng-model="mail.destinataires" multiple="true">
+			<option>ITFR</option>
+			<option>SSDES</option>
+			<option>Site</option>
+		</select>
+	</form>
+	<div ng-show="hidden">
+		(Le chargement du fichier se fera a la suite de la validation de votre
+		mail) </br>
+		</br>
+	</div>
+	<div ng-hide="hidden">
+		<form>
+
+			<div>
+				<input type="file" file-model="myFile" />
+			</div>
+
+			<hr />
+			<div ng-show="uploadOk">
+			<button class="button" ng-click="uploadFile()">Charger
+				fichier</button>
+				</div>
+		</form>
+	</div>
+<div ng-show="hidden">
+	<button class="button" ng-click="sauver()">Sauver</button>
+	</br>
+	</div>
+	</br>
+
+	<button class="button" ng-click="retour()">Retour</button>
+</div>

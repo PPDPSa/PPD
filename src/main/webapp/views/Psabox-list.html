@@ -1,0 +1,22 @@
+<div id="psaboxList">
+
+    <h2>Liste des psabox</h2>
+
+    <ul>
+      <li ng-repeat ="psabox in psaBoxs">
+           <form>
+			<h3>kfan : {{psabox.kfan}}</h3>
+			<p>libelle : {{psabox.libelle}} </p>
+		
+			<h4>contact de cette PSABOX</h4>
+			<p> nom de contact :  {{psabox.contact.nomContact}} </p>
+			<p> email de contact :  {{psabox.contact.emailContact}} </p>
+        <button class="button" ng-click="modifier(psabox)">modifier</button>
+	</form> 
+	
+      </li>
+    </ul>
+
+    <hr/>
+
+</div>

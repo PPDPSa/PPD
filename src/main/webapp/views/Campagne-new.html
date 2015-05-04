@@ -1,0 +1,42 @@
+<div id="CampagneNew">
+
+    <h2>Nouvelle Campagne</h2>
+
+    <form>
+    </br>
+            <label for="">Nom de la campagne</label>
+            <input rows="4" id="campagne.nom" type="text" ng-model="campagne.nom"/> 
+          </br>     
+            PSABOX
+   
+            <select ng-model="campagne.psaboxs" multiple="true" ng-options="psabox.kfan for psabox in Allpsaboxs">
+    </select>
+</br>
+</br>
+Les diff&eacuterentes &eacutetapes avec leurs num&eacuteros de prerequis et les mails types
+<form>
+</br>
+</br>
+Le pr&eacuterequis
+ 
+		<select type="text" ng-model="numero" ng-options="etape for etape in ttEtapes" multiple="true">
+		</select>
+	 </br>		
+	 </br>	
+		Les &eacutetapes
+		 <input rows="4" id="etape" type="text" ng-model="etapeSelected"/> 
+		   </br>   
+		     MAiltypes  
+		        <select ng-model="mail" multiple="true"  ng-options="mail.nom for mail in mails">
+    </select>
+	        <button class="button" ng-click="addEtapes()">Ajouter</button>
+		</form>
+			 </br>
+	<div ng-repeat="etapeIndex in campagne.etapes">{{etapeIndex.priorite}} : {{etapeIndex.nom}} </div>
+        <hr/>
+         </br>
+        <button class="button" ng-click="submit()">Sauver</button>
+
+    </form>
+    	<button class="button" ng-click="retour()">Retour</button>
+</div>

@@ -1,0 +1,21 @@
+<div id="psaBoxNew">
+
+    <h2>New psaBox</h2>
+
+    <form>
+            <label for="psaBox.kfan">KFAN</label>
+            <input id="psaBox.kfan" type="text"  ng-model="psaBox.kfan"/>
+            <label for="psaBox.libelle">Libelle</label>
+            <input id="psaBox.libelle" type="text" ng-model="psaBox.libelle"/>
+            <label for="">Code Rddi</label>
+            <input id="psaBox.codeRddi" type="text" ng-model="psaBox.codeRddi"/>
+            
+            <label for="psaBox.contact">Type d'utilisateurs</label>
+            <select ng-model="psaBox.contact" ng-options="contact.nomContact for contact in contacts | filter:{login: '!'} | filter:{nomContact: '!ITFR'} | filter:{login:'!ITFR'} " multiple="true"  ></select>
+        	<hr/>
+
+        	<button class="button" ng-click="submit()">Sauver</button>
+    </form>
+     </br>	
+	<button class="button" ng-click="retour()">Retour</button>
+</div>

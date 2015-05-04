@@ -1,0 +1,31 @@
+<div id="ContactNew">
+
+    <h2>Nouveau Contact</h2>
+
+    <form>
+            <label for="">Nom Contact</label>
+            <input id="contact.nomContact" type="text" ng-model="contact.nomContact"/>
+            <label for="">Num&eacutero de t&eacutel&eacutephone Contact</label>
+            <input id="contact.numeroTelContact" type="text" ng-model="contact.numeroTelContact"/>
+            <label for="">Email Contact</label>
+            <input id="contact.emailContact" type="text" ng-model="contact.emailContact"/>
+            
+            <input type="checkbox" ng-model="isUtilisateur">  Cochez la case Utilisateur
+            
+            <div ng-show="isUtilisateur">
+	            <label for="contact.login">Login</label>
+	            <input id="contact.login" type="text"  ng-model="contact.login"/>
+	            <label for="contact.mdp">Mdp</label>
+	            <input id="contact.mdp" type="text"  ng-model="contact.mdp"/>
+	            <label for="contact.droit">Type de droit</label>
+	           <select id="contact.droit" type="text"  ng-model="contact.droit"  >
+	           <option ng-repeat="droit in droits">{{droit}}<option>
+	           </select>
+       		</div>
+        <hr/>
+        <button class="button" ng-click="submit()">Sauver</button>
+    </form>
+ 
+    </br>
+    <button class="button" ng-click="retour()">Retour</button>
+</div>

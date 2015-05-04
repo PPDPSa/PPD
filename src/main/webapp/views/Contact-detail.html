@@ -1,0 +1,22 @@
+<div id="ContactDetail">
+
+    <h2>D&eacutetail Contact</h2>
+
+    <form>
+            <label for="">nomContact</label>
+            <input id="contact.nomContact" type="text" ng-model="contact.nomContact"/>
+            <label for="">numeroTelContact</label>
+            <input id="contact.numeroTelContact" type="text" ng-model="contact.numeroTelContact"/>
+            <label for="">emailContact</label>
+            <input id="contact.emailContact" type="text" ng-model="contact.emailContact"/>
+            <label for="contact.login">login</label>
+			{{contact.login}}
+            <label for="contact.mdp">mdp</label>
+            <input id="contact.mdp" type="text"  ng-model="contact.mdp"/>
+            <label for="contact.droit">droit</label>
+            <input id="contact.droit" type="text"  ng-model="contact.droit"/>
+        <hr/>
+        <button class="button" ng-click="modifier()">modifier</button>
+
+    </form>
+</div>

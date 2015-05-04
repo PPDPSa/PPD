@@ -1,0 +1,13 @@
+<div id="MailListe">
+
+    <h2>Liste mails</h2>
+
+   <div ng-repeat="mail in mails" >
+	</br>
+	<h3> nom du mail : {{mail.nom}} </h3>
+	<p> corp du text : {{mail.corpText}} </p>
+	<p ng-repeat="destinataire in mail.destinataires">
+	destinataire : {{destinataire.login}}
+	</p>
+	</div>
+</div>
